@@ -1,17 +1,17 @@
 openapi: 3.0.1
 info:
-  title: defaultTitle
-  description: defaultDescription
+  title: oneHR
+  description: This is a documentation for Cognizants internal application aimed at helpin HR department inside Cognizant.
   version: '0.1'
 servers:
   - url: http://localhost:5000
 paths:
-  /documents/0/4/uploads:
+  /documents/{user_id}/{document_id}/uploads:
     post:
-      description: Auto generated using Swagger Inspector
+      description: Endpoint for the user to upload a file for an attached document
       responses:
         '200':
-          description: Auto generated using Swagger Inspector
+          description: successful operation
           content:
             application/json:
               schema:
@@ -34,12 +34,12 @@ paths:
         - url: http://localhost:5000
     servers:
       - url: http://localhost:5000
-  /documents/0/4/delete:
+  /documents/{user_id}/{document_id}/delete:
     delete:
       description: Auto generated using Swagger Inspector
       responses:
         '200':
-          description: Auto generated using Swagger Inspector
+          description: successful operation
           content:
             application/json:
               schema:
@@ -62,7 +62,7 @@ paths:
         - url: http://localhost:5000
     servers:
       - url: http://localhost:5000
-  /list/0:
+  /list/{user_id}:
     post:
       description: Auto generated using Swagger Inspector
       parameters:
@@ -103,7 +103,7 @@ paths:
           example: apr%2Crej%2Ccrt%2Cupl%2Copt%2Cmdt
       responses:
         '200':
-          description: Auto generated using Swagger Inspector
+          description: successful operation
           content:
             application/json:
               schema:
@@ -148,7 +148,7 @@ paths:
         - url: http://localhost:5000
     servers:
       - url: http://localhost:5000
-  /documents/0/4/status:
+  /documents/{user_id}/{document_id}/status:
     post:
       description: Auto generated using Swagger Inspector
       requestBody:
@@ -179,7 +179,7 @@ paths:
                   "comment":""}}
       responses:
         '200':
-          description: Auto generated using Swagger Inspector
+          description: successful operation
           content:
             application/json:
               schema:
@@ -257,7 +257,7 @@ paths:
           example: apr%2Crej%2Ccrt%2Cupl%2Copt%2Cmdt
       responses:
         '200':
-          description: Auto generated using Swagger Inspector
+          description: successful operation
           content:
             application/json:
               schema:
@@ -315,7 +315,7 @@ paths:
                 value: user_id=0&title=contract&is_mandatory=false
       responses:
         '200':
-          description: Auto generated using Swagger Inspector
+          description: successful operation
           content:
             application/json:
               schema:
@@ -337,9 +337,9 @@ paths:
         - url: http://localhost:5000
     servers:
       - url: http://localhost:5000
-  /documents/0/4/fetch:
+  /documents/{user_id}/{document_id}/fetch:
     get:
-      description: Auto generated using Swagger Inspector
+      description: Endpoint for view or download attached user file
       parameters:
         - name: as_attachment
           in: query
@@ -348,7 +348,7 @@ paths:
           example: 'true'
       responses:
         '200':
-          description: Auto generated using Swagger Inspector
+          description: successful operation
       servers:
         - url: http://localhost:5000
     servers:
